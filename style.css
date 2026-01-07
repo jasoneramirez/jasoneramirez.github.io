@@ -48,25 +48,32 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* About section */
+/* Intro section */
 
-.about {
-  position: relative;
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 50px;
 }
 
-/* Profile photo */
+.intro-text {
+  flex: 1;
+}
 
-.profile-photo {
-  float: right;
-  width: 170px;
-  height: 170px;
-  margin: 0.2em 0 0.6em 2em;
-  border-radius: 50%;
+.intro-text p {
+  margin-bottom: 1.2em;
+}
+
+.intro-photo img {
+  width: 180px;      /* ajustable: 170–190 */
+  height: 180px;
   object-fit: cover;
+  border-radius: 50%;
 }
 
-
-/* Text */
+/* Main text */
 
 .about p {
   margin-bottom: 1.2em;
