@@ -81,4 +81,22 @@ p {
 .paper-desc {
   color: #222;
 }
+.teaching-item {
+  margin-bottom: 28px;
+}
+
+.course-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.course-meta {
+  font-size: 0.95em;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.course-desc {
+  color: #222;
+}
 
