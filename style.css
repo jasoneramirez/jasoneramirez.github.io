@@ -14,21 +14,29 @@ body {
 /* Layout */
 
 main {
-  max-width: 760px;
-  margin: 80px auto;
+  max-width: 720px;
+  margin: 100px auto;
   padding: 0 24px;
 }
 
 /* Header */
 
 header {
-  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 70px;
+}
+
+.header-text {
+  max-width: 520px;
 }
 
 h1 {
-  font-size: 2.2em;
+  font-size: 2.35em;
   font-weight: 400;
-  margin-bottom: 8px;
+  letter-spacing: 0.2px;
+  margin-bottom: 6px;
 }
 
 .subtitle {
@@ -41,31 +49,66 @@ h1 {
 
 nav a {
   margin-right: 14px;
-  color: #003366;
+  color: #1a4a7a;
   text-decoration: none;
-  font-weight: 400;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
+/* Profile photo */
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 /* Sections */
 
 section {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 h2 {
   font-size: 1.35em;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+/* Publications */
+
+.paper {
+  margin-bottom: 26px;
+}
+
+.paper-title a {
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+}
+
+.paper-title a:hover {
+  text-decoration: underline;
+}
+
+.paper-meta {
+  font-size: 0.9em;
+  color: #666;
+  margin: 2px 0 6px 0;
+}
+
+.paper-desc {
+  font-size: 0.95em;
+  color: #333;
 }
 
 /* Footer */
 
 footer {
-  margin-top: 80px;
+  margin-top: 90px;
   font-size: 0.9em;
   color: #666;
 }
