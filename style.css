@@ -53,3 +53,32 @@ p {
   margin-bottom: 1.2em;
   color: #222;
 }
+
+.paper {
+  margin-bottom: 35px;
+}
+
+.paper-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.paper-title a {
+  color: #111;
+  text-decoration: none;
+}
+
+.paper-title a:hover {
+  text-decoration: underline;
+}
+
+.paper-meta {
+  font-size: 0.95em;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.paper-desc {
+  color: #222;
+}
+
