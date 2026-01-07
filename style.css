@@ -22,33 +22,24 @@ main {
 /* Header */
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 70px;
-}
-
-.header-text {
-  max-width: 520px;
+  margin-bottom: 50px;
 }
 
 h1 {
-  font-size: 2.35em;
+  font-size: 2.4em;
   font-weight: 400;
   letter-spacing: 0.2px;
-  margin-bottom: 6px;
-}
-
-.subtitle {
-  font-size: 1.05em;
-  color: #444;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 /* Navigation */
 
+nav {
+  margin-bottom: 40px;
+}
+
 nav a {
-  margin-right: 14px;
+  margin-right: 16px;
   color: #1a4a7a;
   text-decoration: none;
 }
@@ -57,58 +48,26 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* About section */
+
+.about {
+  position: relative;
+}
+
 /* Profile photo */
 
 .profile-photo {
+  float: right;
   width: 160px;
   height: 160px;
-  object-fit: cover;
+  margin: 0 0 20px 30px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
-/* Sections */
+/* Text */
 
-section {
-  margin-bottom: 60px;
-}
-
-h2 {
-  font-size: 1.35em;
-  font-weight: 400;
-  margin-bottom: 14px;
-}
-
-/* Publications */
-
-.paper {
-  margin-bottom: 26px;
-}
-
-.paper-title a {
-  font-weight: 500;
-  color: #111;
-  text-decoration: none;
-}
-
-.paper-title a:hover {
-  text-decoration: underline;
-}
-
-.paper-meta {
-  font-size: 0.9em;
-  color: #666;
-  margin: 2px 0 6px 0;
-}
-
-.paper-desc {
-  font-size: 0.95em;
-  color: #333;
-}
-
-/* Footer */
-
-footer {
-  margin-top: 90px;
-  font-size: 0.9em;
-  color: #666;
+.about p {
+  margin-bottom: 1.2em;
+  color: #222;
 }
