@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500&display=swap");
 
-/* Base */
-
 body {
   margin: 0;
   background: #ffffff;
@@ -11,31 +9,20 @@ body {
   line-height: 1.65;
 }
 
-/* Layout */
-
 main {
   max-width: 720px;
   margin: 100px auto;
   padding: 0 24px;
 }
 
-/* Header */
-
-header {
-  margin-bottom: 50px;
-}
-
 h1 {
   font-size: 2.4em;
   font-weight: 400;
-  letter-spacing: 0.2px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-/* Navigation */
-
 nav {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 nav a {
@@ -48,34 +35,20 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Intro section */
+/* Profile photo */
 
-.intro {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  margin-bottom: 50px;
-}
-
-.intro-text {
-  flex: 1;
-}
-
-.intro-text p {
-  margin-bottom: 1.2em;
-}
-
-.intro-photo img {
-  width: 180px;      /* ajustable: 170–190 */
+.profile-photo {
+  float: right;
+  width: 180px;
   height: 180px;
-  object-fit: cover;
+  margin: 0.2em 0 1em 2em;
   border-radius: 50%;
+  object-fit: cover;
 }
 
-/* Main text */
+/* Text */
 
-.about p {
+p {
   margin-bottom: 1.2em;
   color: #222;
 }
