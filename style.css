@@ -1,6 +1,6 @@
 /* Base */
 :root{
-  --max: 980px;
+  --max: 1180px;
   --text: #111;
   --muted: #555;
   --link: #0b57d0;
@@ -22,7 +22,7 @@ body{
 .container{
   max-width: var(--max);
   margin: 0 auto;
-  padding: 0 18px;
+  padding: 0 28px;
 }
 
 a{ color: var(--link); text-decoration: none; }
@@ -34,12 +34,13 @@ a:hover{ text-decoration: underline; }
   position: sticky;
   top: 0;
   background: #fff;
+  z-index: 10;
 }
 
 .topbar-inner{
   max-width: var(--max);
   margin: 0 auto;
-  padding: 16px 18px;
+  padding: 16px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,7 +92,7 @@ h2{
   color: var(--muted);
 }
 
-/* Home: bio layout */
+/* Home layout */
 .bio-wrap{
   margin-top: 26px;
 }
@@ -99,17 +100,10 @@ h2{
 .desktop-only{ display: block; }
 .mobile-only{ display: none; }
 
-.bio-desktop{
-  display: flex;
-  align-items: center;
-  gap: 44px;
-}
-
-/* mejor “ajuste” de texto */
+/* Bio text */
 .bio-text{
-  flex: 1;
   font-size: 0.98em;
-  max-width: 640px;
+  max-width: none; /* IMPORTANT: prevents narrow column */
 }
 
 .bio-text p{
@@ -117,27 +111,15 @@ h2{
   margin-bottom: 14px;
 }
 
-.bio-photo{
-  width: 260px;    /* más grande */
-  flex-shrink: 0;
-}
-
-.profile-photo{
-  width: 260px;    /* más grande */
-  height: 260px;
-  object-fit: cover;
-  border-radius: 50%;          /* circular garantizado */
-  border: 1px solid var(--border);
-}
-
+/* Float photo (desktop) */
 .float-photo{
   float: right;
-  width: 240px;
-  height: 240px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  margin-left: 36px;
-  margin-bottom: 18px;
+  margin-left: 24px;
+  margin-bottom: 16px;
   border: 1px solid var(--border);
 }
 
@@ -151,7 +133,7 @@ h2{
   margin-top: 22px;
 }
 
-/* links tipo “píldora” elegante */
+/* contact links as pills */
 .contact a{
   display: inline-block;
   padding: 8px 12px;
@@ -205,14 +187,23 @@ h2{
   .desktop-only{ display: none; }
   .mobile-only{ display: block; }
 
-  .bio-photo{ width: 170px; }
-  .profile-photo{ width: 170px; height: 170px; }
-
-  .float-photo{
-  width: 260px;
-  height: 260px;
-}
-
   h1{ font-size: 26px; }
+
+  /* float photo becomes centered image */
+  .float-photo{
+    float: none;
+    display: block;
+    margin: 0 auto 18px;
+    width: 170px;
+    height: 170px;
+  }
+
+  .container{
+    padding: 0 18px;
+  }
+
+  .topbar-inner{
+    padding: 16px 18px;
+  }
 }
 
