@@ -105,36 +105,54 @@ h2{
   gap: 44px;
 }
 
+/* mejor “ajuste” de texto */
 .bio-text{
   flex: 1;
   font-size: 0.98em;
+  max-width: 640px;
+}
+
+.bio-text p{
+  margin-top: 0;
+  margin-bottom: 14px;
 }
 
 .bio-photo{
-  width: 220px;
+  width: 260px;    /* más grande */
   flex-shrink: 0;
 }
 
 .profile-photo{
-  width: 220px;
-  height: 220px;
+  width: 260px;    /* más grande */
+  height: 260px;
   object-fit: cover;
-  border-radius: 999px;   /* circular */
+  border-radius: 50%;          /* circular garantizado */
+  border: 1px solid var(--border);
 }
 
-/* Contact row (like Yasmine) */
+/* Contact row */
 .contact{
   text-align: center;
-  margin-top: 28px;
+  margin-top: 22px;
 }
 
+/* links tipo “píldora” elegante */
 .contact a{
   display: inline-block;
-  margin: 0 16px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  margin: 6px 10px;
   font-weight: 600;
+  color: var(--text);
 }
 
-/* Paper / teaching entries (minimal, no card boxes) */
+.contact a:hover{
+  text-decoration: none;
+  border-color: #cfcfcf;
+}
+
+/* Paper / teaching entries */
 .paper, .teaching-item{
   margin: 18px 0 22px;
   padding-left: 14px;
@@ -172,8 +190,8 @@ h2{
   .desktop-only{ display: none; }
   .mobile-only{ display: block; }
 
-  .bio-photo{ width: 150px; }
-  .profile-photo{ width: 150px; height: 150px; }
+  .bio-photo{ width: 170px; }
+  .profile-photo{ width: 170px; height: 170px; }
 
   h1{ font-size: 26px; }
 }
