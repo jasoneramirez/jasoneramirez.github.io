@@ -201,7 +201,6 @@ h2{
 
   h1{ font-size: 26px; }
 
-  /* container consistent with other pages */
   .container{
     padding: 0 18px;
   }
@@ -210,14 +209,19 @@ h2{
     padding: 16px 18px;
   }
 
-  /* prevent floating behavior on mobile */
-  .float-photo{
-    float: none;
+  /* foto grande, circular y responsive en móvil */
+  .profile-photo{
+    width: min(340px, 92vw);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
     margin: 0 auto 18px;
   }
 
-  /* mobile photo size */
-  .profile-photo{
-    width: 170px;
+  /* por si se usa float-photo en algún sitio, desactivarlo en móvil */
+  .float-photo{
+    float: none;
+    margin: 0 auto 18px;
   }
 }
