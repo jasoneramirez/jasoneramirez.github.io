@@ -16,6 +16,7 @@ body{
   color: var(--text);
   background: #fff;
   line-height: 1.65;
+  font-size: 16.5px;
 }
 
 /* Layout */
@@ -73,7 +74,7 @@ a:hover{ text-decoration: underline; }
 
 /* Page title */
 .page-title{
-  margin: 28px 0 14px;
+  margin: 36px 0 14px;
 }
 
 h1{
@@ -125,8 +126,8 @@ h2{
 /* Float photo (desktop special) */
 .float-photo{
   float: right;
-  width: 220px;
-  height: 220px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   object-fit: cover;
   margin-left: 24px;
