@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teaching · Jasone Ramírez-Ayerbe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">Jasone Ramírez-Ayerbe</a>
+
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a class="active" href="teaching.html">Teaching</a>
+      </nav>
+
+      <nav class="links">
+        <a class="pill" href="CV_Jasone_25.pdf">CV</a>
+        <a class="pill" href="mailto:miren.jasone.ramirez.ayerbe@umontreal.ca">Email</a>
+        <a class="pill" href="https://scholar.google.com/citations?user=JxucJSQAAAAJ">Scholar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Teaching</h1>
+        <p class="subtitle">Teaching experience and course activities.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Teaching</h2>
+
+      <div class="teaching-item">
+        <p class="course-title">
+          Linear Models and Design of Experiments
+        </p>
+        <p class="course-meta">
+          BSc in Mathematics & Mathematics–Statistics (3rd–4th year), University of Seville
+        </p>
+        <p class="course-desc">
+          I taught practical sessions focused on linear regression models and experimental design,
+          with an emphasis on implementation and data analysis in <em>R</em>. My teaching approach
+          centered on helping students translate theoretical concepts into working statistical models,
+          write reproducible code, and critically interpret outputs. Particular attention was given to
+          model diagnostics, experimental structure, and the connection between assumptions and results.
+        </p>
+      </div>
+
+      <div class="teaching-item">
+        <p class="course-title">
+          Statistics
+        </p>
+        <p class="course-meta">
+          BSc in Health Engineering (1st year), University of Seville
+        </p>
+        <p class="course-desc">
+          I taught both theory and practice in an introductory statistics course for engineering
+          students. Alongside foundational topics in descriptive statistics, probability, and inference,
+          I introduced students to statistical computing in <em>R</em>, focusing on hands-on data analysis
+          and interpretation. The goal was to equip students with practical tools to analyze real data
+          and to understand statistical reasoning in applied health and engineering contexts.
+        </p>
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      © <span id="y"></span> Jasone Ramírez-Ayerbe
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
