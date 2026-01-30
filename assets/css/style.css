@@ -1,102 +1,148 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500&display=swap");
+:root{
+  --bg: #0b0f19;
+  --bg2: #0f172a;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --link: #93c5fd;
+  --card: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.12);
+  --shadow: 0 20px 60px rgba(0,0,0,0.45);
+  --radius: 18px;
+  --max: 980px;
+  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
 
-body {
+*{ box-sizing: border-box; }
+html, body{ margin:0; padding:0; }
+body{
+  font-family: var(--font);
+  color: var(--text);
+  background:
+    radial-gradient(1200px 700px at 80% -10%, rgba(59,130,246,0.25), transparent 60%),
+    radial-gradient(900px 600px at 10% 10%, rgba(147,197,253,0.18), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg2));
+  min-height: 100vh;
+}
+
+a{ color: var(--link); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar */
+.navbar{
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(11,15,25,0.75);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 16px 0;
+}
+
+.brand{
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--text);
+}
+
+.nav-links{
+  display:flex;
+  gap: 18px;
+}
+
+.nav-links a{
+  color: var(--muted);
+  padding: 8px 10px;
+  border-radius: 999px;
+  transition: background .2s ease, color .2s ease;
+}
+
+.nav-links a:hover{
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links a.active{
+  background: rgba(255,255,255,0.10);
+  color: var(--text);
+}
+
+/* Hero */
+.hero{
+  padding: 64px 0 34px;
+}
+
+.hero-card{
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.hero h1{
+  font-size: 40px;
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+
+.hero p{
   margin: 0;
-  background: #ffffff;
-  color: #111;
-  font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.65;
-  font-size: 15.5px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-main {
-  max-width: 720px;
-  margin: 100px auto;
-  padding: 0 24px;
+/* Sections */
+.section{
+  padding: 24px 0;
 }
 
-h1 {
-  font-size: 2.4em;
-  font-weight: 400;
-  margin-bottom: 10px;
+.section h2{
+  margin: 0 0 14px;
+  font-size: 20px;
+  letter-spacing: 0.2px;
 }
 
-nav {
-  margin-bottom: 30px;
+.card{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.05);
+  padding: 18px;
 }
 
-nav a {
-  margin-right: 16px;
-  color: #1a4a7a;
-  text-decoration: none;
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.list{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
-/* Profile photo */
-
-.profile-photo {
-  float: right;
-  width: 180px;
-  height: 180px;
-  margin: 0.2em 0 1em 2em;
-  border-radius: 50%;
-  object-fit: cover;
+.footer{
+  padding: 40px 0 26px;
+  color: var(--muted);
+  font-size: 14px;
 }
 
-/* Text */
-
-p {
-  margin-bottom: 1.2em;
-  color: #222;
+@media (max-width: 720px){
+  .grid{ grid-template-columns: 1fr; }
+  .hero h1{ font-size: 32px; }
 }
-
-.paper {
-  margin-bottom: 35px;
-}
-
-.paper-title {
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-
-.paper-title a {
-  color: #111;
-  text-decoration: none;
-}
-
-.paper-title a:hover {
-  text-decoration: underline;
-}
-
-.paper-meta {
-  font-size: 0.95em;
-  color: #666;
-  margin-bottom: 8px;
-}
-
-.paper-desc {
-  color: #222;
-}
-.teaching-item {
-  margin-bottom: 28px;
-}
-
-.course-title {
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-
-.course-meta {
-  font-size: 0.95em;
-  color: #666;
-  margin-bottom: 8px;
-}
-
-.course-desc {
-  color: #222;
-}
-
