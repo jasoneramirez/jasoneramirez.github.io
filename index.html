@@ -8,154 +8,88 @@
 </head>
 
 <body>
- <main>
-  <h1>Jasone Ramírez-Ayerbe</h1>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">Jasone Ramírez-Ayerbe</a>
 
-  <nav>
-    <a href="CV_Jasone_25.pdf">CV</a>
-    <a href="mailto:miren.jasone.ramirez.ayerbe@umontreal.ca">Email</a>
-    <a href="https://scholar.google.com/citations?user=JxucJSQAAAAJ">Google Scholar</a>
-  </nav>
+      <nav class="menu">
+        <a class="active" href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+      </nav>
+    </div>
+  </header>
 
-  <img src="jasone.jpg" alt="Photo of Jasone Ramírez-Ayerbe" class="profile-photo">
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-grid">
+          <div>
+            <h1>Jasone Ramírez-Ayerbe</h1>
 
-  <p>
-    I am a postdoctoral researcher with a background in mathematics, currently
-    based in Montréal. I hold undergraduate degrees in Mathematics and Physics,
-    as well as an MSc in Mathematics. I completed my PhD in Mathematics at the
-    University of Seville, under the co-supervision of Emilio Carrizosa and
-    Dolores Romero Morales. 
-  </p>
+            <p class="subtitle">
+              Postdoctoral researcher in Mathematics · Montréal
+            </p>
 
-  <p>
-    My research initially focused on counterfactual explanations, where I worked
-    on extending individual-level explanations to a group-level perspective,
-    motivated by a stakeholder’s view. This global perspective enables a more
-    insightful understanding of how models behave, including the detection of
-    biases and patterns, and led me to explore interpretability analysis approaches beyond
-    standard predictive models, such as data envelopment analysis (DEA).
-  </p>
+            <nav class="links">
+              <a class="pill" href="CV_Jasone_25.pdf">CV</a>
+              <a class="pill" href="mailto:miren.jasone.ramirez.ayerbe@umontreal.ca">Email</a>
+              <a class="pill" href="https://scholar.google.com/citations?user=JxucJSQAAAAJ">Google Scholar</a>
+            </nav>
+          </div>
 
-  <p>
-    More recently, my focus has shifted toward explaining decisions arising from
-    data-driven and stochastic optimization models. Rather than explaining only
-    predictions or classification outcomes, I am interested in understanding how
-    optimization-based decisions are made under uncertainty, including both
-    endogenous and exogenous sources of uncertainty.
-  </p>
+          <div class="hero-photo">
+            <img src="jasone.jpg" alt="Photo of Jasone Ramírez-Ayerbe" class="profile-photo">
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <p>
-    Outside academia, I keep my artistic side alive through music. I hold a
-    Professional Title in Piano and have completed three years of advanced
-    studies. I also am an avid reader and lover cinema, recommendations and thoughtful
-    discussions are always welcome!
-  </p>
+    <section class="section">
+      <h2>About</h2>
+      <div class="card">
+        <p>
+          I am a postdoctoral researcher with a background in mathematics, currently
+          based in Montréal. I hold undergraduate degrees in Mathematics and Physics,
+          as well as an MSc in Mathematics. I completed my PhD in Mathematics at the
+          University of Seville, under the co-supervision of Emilio Carrizosa and
+          Dolores Romero Morales.
+        </p>
 
-</section>
+        <p style="margin-bottom:0;">
+          My research initially focused on counterfactual explanations, where I worked
+          on extending individual-level explanations to a group-level perspective,
+          motivated by a stakeholder’s view. This global perspective enables a more
+          insightful understanding of how models behave, including the detection of
+          biases and patterns, and led me to explore interpretability analysis approaches beyond
+          standard predictive models, such as data envelopment analysis (DEA).
+        </p>
+      </div>
+    </section>
 
-    <section>
-  <h2>Selected Research</h2>
+    <section class="section">
+      <h2>Quick links</h2>
+      <div class="grid">
+        <a class="card card-link" href="research.html">
+          <b>Research</b>
+          <p>Publications, preprints and research interests.</p>
+        </a>
 
-  <div class="paper">
-    <p class="paper-title">
-      <a href="https://doi.org/10.1016/j.ejor.2024.01.002">
-        Mathematical Optimization Modelling for Group Counterfactual Explanations
-      </a>
-    </p>
-    <p class="paper-meta">
-      European Journal of Operational Research, 2024
-    </p>
-    <p class="paper-desc">
-      This paper introduces a mathematical optimization framework for generating
-      counterfactual explanations at the group level. Moving beyond individual
-      explanations, we adopt a stakeholder perspective in which counterfactuals
-      must be produced jointly under structural and feasibility constraints.
-      The resulting models reveal close connections between group counterfactual
-      explanations and classical facility location problems.
-    </p>
-  </div>
+        <a class="card card-link" href="teaching.html">
+          <b>Teaching</b>
+          <p>Courses, supervision and teaching materials.</p>
+        </a>
+      </div>
+    </section>
 
-  <div class="paper">
-    <p class="paper-title">
-      <a href="https://doi.org/10.1016/j.ejor.2024.01.005">
-        Counterfactual Analysis and Target Setting in Benchmarking
-      </a>
-    </p>
-    <p class="paper-meta">
-      European Journal of Operational Research, 2024
-    </p>
-    <p class="paper-desc">
-      We extend counterfactual reasoning to Data Envelopment Analysis (DEA),
-      introducing an optimization-based framework for interpretable target
-      setting in efficiency analysis. Counterfactual targets are computed via
-      mixed-integer convex optimization, providing transparent and actionable
-      explanations for inefficient units in benchmarking applications.
-    </p>
-  </div>
-
-  <div class="paper">
-    <p class="paper-title">
-      <a href="https://doi.org/10.1016/j.eswa.2023.121954">
-        Generating Collective Counterfactual Explanations in Score-Based
-        Classification via Mathematical Optimization
-      </a>
-    </p>
-    <p class="paper-meta">
-      Expert Systems with Applications, 2024
-    </p>
-    <p class="paper-desc">
-      This work studies collective counterfactual explanations, where 
-      explanations are generated for an entire group of individuals at the same time. We formulate
-      the problem as a mixed-integer optimization model that minimizes total
-      perturbation cost while guaranteeing a favorable classification outcome,
-      allowing shared influential features and outliers to be identified
-      simultaneously.
-    </p>
-  </div>
-
-</section>
-
-
-    <section>
-  <h2>Teaching</h2>
-
-  <div class="teaching-item">
-    <p class="course-title">
-      Linear Models and Design of Experiments
-    </p>
-    <p class="course-meta">
-      BSc in Mathematics & Mathematics–Statistics (3rd–4th year), University of Seville
-    </p>
-    <p class="course-desc">
-      I taught practical sessions focused on linear regression models and experimental design,
-      with an emphasis on implementation and data analysis in <em>R</em>. My teaching approach
-      centered on helping students translate theoretical concepts into working statistical models,
-      write reproducible code, and critically interpret outputs. Particular attention was given to
-      model diagnostics, experimental structure, and the connection between assumptions and results.
-    </p>
-  </div>
-
-  <div class="teaching-item">
-    <p class="course-title">
-      Statistics
-    </p>
-    <p class="course-meta">
-      BSc in Health Engineering (1st year), University of Seville
-    </p>
-    <p class="course-desc">
-      I taught both theory and practice in an introductory statistics course for engineering
-      students. Alongside foundational topics in descriptive statistics, probability, and inference,
-      I introduced students to statistical computing in <em>R</em>, focusing on hands-on data analysis
-      and interpretation. The goal was to equip students with practical tools to analyze real data
-      and to understand statistical reasoning in applied health and engineering contexts.
-    </p>
-  </div>
-</section>
-
-    <footer>
-      <p>© Jasone Ramírez-Ayerbe</p>
+    <footer class="footer">
+      © <span id="y"></span> Jasone Ramírez-Ayerbe
     </footer>
-
   </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
