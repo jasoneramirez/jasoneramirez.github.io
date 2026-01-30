@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Research · Jasone Ramírez-Ayerbe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">Jasone Ramírez-Ayerbe</a>
+
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a class="active" href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Research</h1>
+        <p class="subtitle">Interests, publications, and ongoing work.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Research interests</h2>
+      <div class="card">
+        <ul class="list">
+          <li>Counterfactual explanations (individual & group-level)</li>
+          <li>Interpretability and bias detection</li>
+          <li>Data Envelopment Analysis (DEA)</li>
+          <li>Optimization & applied mathematics</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Selected publications</h2>
+
+      <!-- EJEMPLOS: sustituye por tus papers -->
+      <div class="card pub">
+        <b>Paper title</b>
+        <div class="muted">Authors · Journal/Conference · Year</div>
+        <div class="pub-links">
+          <a href="#">PDF</a>
+          <span>·</span>
+          <a href="#">DOI</a>
+        </div>
+      </div>
+
+      <div class="card pub">
+        <b>Paper title</b>
+        <div class="muted">Authors · Journal/Conference · Year</div>
+        <div class="pub-links">
+          <a href="#">PDF</a>
+          <span>·</span>
+          <a href="#">arXiv</a>
+        </div>
+      </div>
+
+      <p class="note">
+        Full list available on <a href="https://scholar.google.com/citations?user=JxucJSQAAAAJ">Google Scholar</a>.
+      </p>
+    </section>
+
+    <footer class="footer">
+      © <span id="y"></span> Jasone Ramírez-Ayerbe
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
