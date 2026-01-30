@@ -17,56 +17,84 @@
         <a class="active" href="research.html">Research</a>
         <a href="teaching.html">Teaching</a>
       </nav>
+
+      <nav class="links">
+        <a class="pill" href="CV_Jasone_25.pdf">CV</a>
+        <a class="pill" href="mailto:miren.jasone.ramirez.ayerbe@umontreal.ca">Email</a>
+        <a class="pill" href="https://scholar.google.com/citations?user=JxucJSQAAAAJ">Scholar</a>
+      </nav>
     </div>
   </header>
 
   <main class="container">
+
     <section class="hero">
       <div class="hero-card">
         <h1>Research</h1>
-        <p class="subtitle">Interests, publications, and ongoing work.</p>
+        <p class="subtitle">Selected publications and research topics.</p>
       </div>
     </section>
 
     <section class="section">
-      <h2>Research interests</h2>
-      <div class="card">
-        <ul class="list">
-          <li>Counterfactual explanations (individual & group-level)</li>
-          <li>Interpretability and bias detection</li>
-          <li>Data Envelopment Analysis (DEA)</li>
-          <li>Optimization & applied mathematics</li>
-        </ul>
-      </div>
-    </section>
+      <h2>Selected Research</h2>
 
-    <section class="section">
-      <h2>Selected publications</h2>
-
-      <!-- EJEMPLOS: sustituye por tus papers -->
-      <div class="card pub">
-        <b>Paper title</b>
-        <div class="muted">Authors · Journal/Conference · Year</div>
-        <div class="pub-links">
-          <a href="#">PDF</a>
-          <span>·</span>
-          <a href="#">DOI</a>
-        </div>
+      <div class="paper">
+        <p class="paper-title">
+          <a href="https://doi.org/10.1016/j.ejor.2024.01.002">
+            Mathematical Optimization Modelling for Group Counterfactual Explanations
+          </a>
+        </p>
+        <p class="paper-meta">
+          European Journal of Operational Research, 2024
+        </p>
+        <p class="paper-desc">
+          This paper introduces a mathematical optimization framework for generating
+          counterfactual explanations at the group level. Moving beyond individual
+          explanations, we adopt a stakeholder perspective in which counterfactuals
+          must be produced jointly under structural and feasibility constraints.
+          The resulting models reveal close connections between group counterfactual
+          explanations and classical facility location problems.
+        </p>
       </div>
 
-      <div class="card pub">
-        <b>Paper title</b>
-        <div class="muted">Authors · Journal/Conference · Year</div>
-        <div class="pub-links">
-          <a href="#">PDF</a>
-          <span>·</span>
-          <a href="#">arXiv</a>
-        </div>
+      <div class="paper">
+        <p class="paper-title">
+          <a href="https://doi.org/10.1016/j.ejor.2024.01.005">
+            Counterfactual Analysis and Target Setting in Benchmarking
+          </a>
+        </p>
+        <p class="paper-meta">
+          European Journal of Operational Research, 2024
+        </p>
+        <p class="paper-desc">
+          We extend counterfactual reasoning to Data Envelopment Analysis (DEA),
+          introducing an optimization-based framework for interpretable target
+          setting in efficiency analysis. Counterfactual targets are computed via
+          mixed-integer convex optimization, providing transparent and actionable
+          explanations for inefficient units in benchmarking applications.
+        </p>
       </div>
 
-      <p class="note">
-        Full list available on <a href="https://scholar.google.com/citations?user=JxucJSQAAAAJ">Google Scholar</a>.
-      </p>
+      <div class="paper">
+        <p class="paper-title">
+          <a href="https://doi.org/10.1016/j.eswa.2023.121954">
+            Generating Collective Counterfactual Explanations in Score-Based
+            Classification via Mathematical Optimization
+          </a>
+        </p>
+        <p class="paper-meta">
+          Expert Systems with Applications, 2024
+        </p>
+        <p class="paper-desc">
+          This work studies collective counterfactual explanations, where 
+          explanations are generated for an entire group of individuals at the same time. We formulate
+          the problem as a mixed-integer optimization model that minimizes total
+          perturbation cost while guaranteeing a favorable classification outcome,
+          allowing shared influential features and outliers to be identified
+          simultaneously.
+        </p>
+      </div>
+
     </section>
 
     <footer class="footer">
