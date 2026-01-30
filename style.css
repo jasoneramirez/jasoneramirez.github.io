@@ -103,7 +103,7 @@ h2{
 /* Bio text */
 .bio-text{
   font-size: 0.98em;
-  max-width: none; /* IMPORTANT: prevents narrow column */
+  max-width: none; /* prevents narrow column */
 }
 
 .bio-text p{
@@ -111,7 +111,18 @@ h2{
   margin-bottom: 14px;
 }
 
-/* Float photo (desktop) */
+/* ✅ DEFAULT profile photo (used in mobile and anywhere else) */
+.profile-photo{
+  display: block;
+  width: min(220px, 80vw);  /* responsive */
+  height: auto;             /* avoids overflow */
+  aspect-ratio: 1 / 1;      /* keeps it square */
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+}
+
+/* Float photo (desktop special) */
 .float-photo{
   float: right;
   width: 220px;
@@ -123,6 +134,7 @@ h2{
   border: 1px solid var(--border);
 }
 
+/* make sure float is cleared after 2 paragraphs */
 .clear{
   clear: both;
 }
@@ -189,15 +201,7 @@ h2{
 
   h1{ font-size: 26px; }
 
-  /* float photo becomes centered image */
-  .float-photo{
-    float: none;
-    display: block;
-    margin: 0 auto 18px;
-    width: 170px;
-    height: 170px;
-  }
-
+  /* container consistent with other pages */
   .container{
     padding: 0 18px;
   }
@@ -205,5 +209,15 @@ h2{
   .topbar-inner{
     padding: 16px 18px;
   }
-}
 
+  /* prevent floating behavior on mobile */
+  .float-photo{
+    float: none;
+    margin: 0 auto 18px;
+  }
+
+  /* mobile photo size */
+  .profile-photo{
+    width: 170px;
+  }
+}
