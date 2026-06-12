@@ -1,47 +1,87 @@
-/* Base */
+/* =========================================================
+   Jasone Ramírez-Ayerbe — personal site
+   Light + automatic dark mode, single source of content.
+   ========================================================= */
+
+/* ---- Design tokens ---- */
 :root{
-  --max: 1180px;
-  --text: #111;
-  --muted: #555;
-  --link: #0b57d0;
-  --border: #e8e8e8;
-  --font: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+  --max: 820px;
+
+  --bg: #ffffff;
+  --surface: #fafafa;
+  --text: #1a1a1a;
+  --muted: #5c5c5c;
+  --border: #e6e6e6;
+  --accent: #2f6f9f;        /* muted academic blue */
+  --accent-soft: #eaf2f8;
+  --link: var(--accent);
+
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.04);
 }
 
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: #0f1216;
+    --surface: #161a20;
+    --text: #e7e8ea;
+    --muted: #9aa1ac;
+    --border: #262b33;
+    --accent: #7fb0dc;
+    --accent-soft: #18222c;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 18px rgba(0,0,0,.35);
+  }
+}
+
+/* ---- Base ---- */
 *{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
 html, body{ margin:0; padding:0; }
 
 body{
-  font-family: var(--font);
+  font-family: var(--sans);
   color: var(--text);
-  background: #fff;
-  line-height: 1.65;
-  font-size: 16.5px;
-}
-
-/* Layout */
-.container{
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 28px;
+  background: var(--bg);
+  line-height: 1.7;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a{ color: var(--link); text-decoration: none; }
 a:hover{ text-decoration: underline; }
 
-/* Top navigation */
+:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- Layout ---- */
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---- Top navigation ---- */
 .topbar{
-  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
-  background: #fff;
-  z-index: 10;
+  z-index: 20;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: saturate(160%) blur(10px);
+  -webkit-backdrop-filter: saturate(160%) blur(10px);
+  border-bottom: 1px solid var(--border);
 }
 
 .topbar-inner{
   max-width: var(--max);
   margin: 0 auto;
-  padding: 16px 28px;
+  padding: 14px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,180 +89,200 @@ a:hover{ text-decoration: underline; }
 }
 
 .brand{
-  font-weight: 700;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 18px;
   color: var(--text);
-  letter-spacing: 0.2px;
 }
+.brand:hover{ text-decoration: none; color: var(--accent); }
 
-.menu{
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
+.menu{ display: flex; gap: 6px; flex-wrap: wrap; }
 
 .menu a{
   color: var(--muted);
-  padding: 4px 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color .15s, background .15s;
 }
+.menu a:hover{ text-decoration: none; color: var(--text); background: var(--surface); }
 
 .menu a.active{
-  color: var(--text);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 6px;
+  color: var(--accent);
+  background: var(--accent-soft);
 }
 
-/* Page title */
-.page-title{
-  margin: 36px 0 14px;
-}
+/* ---- Page title ---- */
+.page-title{ margin: 48px 0 8px; }
 
 h1{
   margin: 0;
-  font-size: 30px;
-  letter-spacing: 0.2px;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
 
 h2{
-  margin: 34px 0 14px;
-  font-size: 18px;
+  font-family: var(--serif);
+  font-weight: 600;
+  margin: 44px 0 18px;
+  font-size: 23px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
 }
 
 .subtitle{
-  margin: 10px 0 0;
+  margin: 12px 0 0;
   color: var(--muted);
+  font-size: 19px;
 }
 
-/* Home layout */
-.bio-wrap{
-  margin-top: 26px;
-}
+/* ---- Home: bio (single block, responsive) ---- */
+.bio{ margin-top: 30px; }
 
-.desktop-only{ display: block; }
-.mobile-only{ display: none; }
-
-/* Bio text */
-.bio-text{
-  font-size: 0.98em;
-  max-width: none; /* prevents narrow column */
-}
-
-.bio-text p{
-  margin-top: 0;
-  margin-bottom: 14px;
-}
-
-/* ✅ DEFAULT profile photo (used in mobile and anywhere else) */
 .profile-photo{
-  display: block;
-  width: min(220px, 80vw);  /* responsive */
-  height: auto;             /* avoids overflow */
-  aspect-ratio: 1 / 1;      /* keeps it square */
-  object-fit: cover;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-}
-
-/* Float photo (desktop special) */
-.float-photo{
   float: right;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
-  margin-left: 24px;
-  margin-bottom: 16px;
+  border-radius: 18px;
+  margin: 4px 0 18px 28px;
   border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
-/* make sure float is cleared after 2 paragraphs */
-.clear{
+.bio p{ margin: 0 0 16px; }
+
+.clear{ clear: both; }
+
+/* ---- Contact / link pills ---- */
+.contact{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
   clear: both;
 }
 
-/* Contact row */
-.contact{
-  text-align: center;
-  margin-top: 22px;
-}
-
-/* contact links as pills */
 .contact a{
-  display: inline-block;
-  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 15px;
   border: 1px solid var(--border);
   border-radius: 999px;
-  margin: 6px 10px;
   font-weight: 600;
+  font-size: 14.5px;
   color: var(--text);
+  background: var(--surface);
+  transition: border-color .15s, transform .12s, color .15s;
 }
-
 .contact a:hover{
   text-decoration: none;
-  border-color: #cfcfcf;
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
 }
 
-/* Paper / teaching entries */
-.paper, .teaching-item{
-  margin: 18px 0 22px;
-  padding-left: 14px;
-  border-left: 3px solid var(--border);
+/* ---- News ---- */
+.news-list{ list-style: none; margin: 0; padding: 0; }
+.news-list li{
+  display: flex;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--border);
 }
-
-.paper-title, .course-title{
-  margin: 0 0 4px;
-  font-weight: 700;
-}
-
-.paper-meta, .course-meta{
-  margin: 0 0 8px;
+.news-list li:last-child{ border-bottom: 0; }
+.news-date{
+  flex: 0 0 92px;
   color: var(--muted);
-  font-size: 0.95em;
+  font-variant-numeric: tabular-nums;
+  font-size: 14.5px;
+  padding-top: 1px;
 }
 
-.paper-desc, .course-desc{
-  margin: 0;
-  color: var(--text);
+/* ---- Talks ---- */
+.year-head{
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--accent);
+  margin: 26px 0 6px;
+  letter-spacing: .02em;
+}
+.talk-list{ list-style: none; margin: 0; padding: 0; }
+.talk-list li{
+  padding: 11px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.talk-list li:last-child{ border-bottom: 0; }
+.talk-title{ font-weight: 600; }
+.talk-venue{ color: var(--muted); font-size: 14.5px; }
+
+/* ---- Cards: papers / teaching / talks ---- */
+.card{
+  margin: 16px 0;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color .15s, box-shadow .15s;
+}
+.card:hover{ border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); box-shadow: var(--shadow); }
+
+.card-title{ margin: 0 0 5px; font-weight: 700; font-size: 17px; line-height: 1.4; }
+.card-meta{ margin: 0 0 10px; color: var(--muted); font-size: 14.5px; }
+.card-desc{ margin: 0; color: var(--text); font-size: 15.5px; }
+
+.tag{
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 2px 9px;
+  border-radius: 999px;
+  margin-left: 8px;
+  vertical-align: middle;
 }
 
-/* Footer */
+/* ---- Footer ---- */
 .footer{
   border-top: 1px solid var(--border);
-  margin-top: 40px;
-  padding: 18px 0 30px;
+  margin-top: 56px;
+  padding: 22px 0 40px;
   color: var(--muted);
-  font-size: 0.95em;
+  font-size: 14px;
   text-align: center;
 }
 
-/* Mobile */
-@media (max-width: 768px){
-  .desktop-only{ display: none; }
-  .mobile-only{ display: block; }
+/* ---- Mobile ---- */
+@media (max-width: 640px){
+  body{ font-size: 16.5px; }
+  h1{ font-size: 30px; }
+  h2{ font-size: 21px; }
+  .subtitle{ font-size: 17px; }
 
-  h1{ font-size: 26px; }
+  .page-title{ margin-top: 34px; }
 
-  .container{
-    padding: 0 18px;
-  }
-
-  .topbar-inner{
-    padding: 16px 18px;
-  }
-
-  /* foto grande, circular y responsive en móvil */
   .profile-photo{
-    width: min(340px, 92vw);
+    float: none;
+    display: block;
+    width: min(260px, 70vw);
     height: auto;
     aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 18px;
+    margin: 0 auto 22px;
   }
 
-  /* por si se usa float-photo en algún sitio, desactivarlo en móvil */
-  .float-photo{
-    float: none;
-    margin: 0 auto 18px;
-  }
+  .news-list li{ flex-direction: column; gap: 2px; }
+  .news-date{ flex-basis: auto; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ transition: none !important; scroll-behavior: auto !important; }
 }

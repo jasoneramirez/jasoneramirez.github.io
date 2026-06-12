@@ -2,8 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Research · Jasone Ramírez-Ayerbe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research · Jasone Ramírez-Ayerbe</title>
+  <meta name="description" content="Publications and preprints by Jasone Ramírez-Ayerbe on mathematical optimization, counterfactual explanations and explainable data-driven decision making.">
+  <link rel="canonical" href="https://jasoneramirez.github.io/research.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,11 +17,11 @@
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="index.html">Jasone Ramírez-Ayerbe</a>
-
       <nav class="menu">
         <a href="index.html">Home</a>
         <a class="active" href="research.html">Research</a>
         <a href="teaching.html">Teaching</a>
+        <a href="talks.html">Talks</a>
       </nav>
     </div>
   </header>
@@ -23,62 +29,118 @@
   <main class="container">
     <div class="page-title">
       <h1>Research</h1>
+      <p class="subtitle">Mathematical optimization for explainable, data-driven decision making.</p>
     </div>
 
     <section>
-      <h2>Selected Research</h2>
+      <h2>Journal Articles</h2>
 
-      <div class="paper">
-        <p class="paper-title">
-          <a href="https://doi.org/10.1016/j.ejor.2024.01.002">
-            Mathematical Optimization Modelling for Group Counterfactual Explanations
+      <div class="card">
+        <p class="card-title">
+          <a href="https://doi.org/10.1016/j.ejor.2024.01.002" target="_blank" rel="noopener">
+            Mathematical optimization modelling for group counterfactual explanations
           </a>
         </p>
-        <p class="paper-meta">European Journal of Operational Research, 2024</p>
-        <p class="paper-desc">
-          This paper introduces a mathematical optimization framework for generating
-          counterfactual explanations at the group level. Moving beyond individual
-          explanations, we adopt a stakeholder perspective in which counterfactuals
-          must be produced jointly under structural and feasibility constraints.
-          The resulting models reveal close connections between group counterfactual
-          explanations and classical facility location problems.
+        <p class="card-meta">E. Carrizosa, J. Ramírez-Ayerbe, D. Romero Morales · European Journal of Operational Research, 319(2):399–412, 2024</p>
+        <p class="card-desc">
+          A mathematical optimization framework for generating counterfactual explanations at the group level.
+          Moving beyond individual explanations, we adopt a stakeholder perspective in which counterfactuals are
+          produced jointly under structural and feasibility constraints, revealing close connections with classical
+          facility location problems. <em>Awarded the SEIO–Fundación BBVA Award 2024.</em>
         </p>
       </div>
 
-      <div class="paper">
-        <p class="paper-title">
-          <a href="https://doi.org/10.1016/j.ejor.2024.01.005">
-            Counterfactual Analysis and Target Setting in Benchmarking
+      <div class="card">
+        <p class="card-title">
+          <a href="https://doi.org/10.1016/j.ejor.2024.01.005" target="_blank" rel="noopener">
+            Counterfactual analysis and target setting in benchmarking
           </a>
         </p>
-        <p class="paper-meta">European Journal of Operational Research, 2024</p>
-        <p class="paper-desc">
-          We extend counterfactual reasoning to Data Envelopment Analysis (DEA),
-          introducing an optimization-based framework for interpretable target
-          setting in efficiency analysis. Counterfactual targets are computed via
-          mixed-integer convex optimization, providing transparent and actionable
-          explanations for inefficient units in benchmarking applications.
+        <p class="card-meta">P. Bogetoft, J. Ramírez-Ayerbe, D. Romero Morales · European Journal of Operational Research, 315(3):1083–1095, 2024</p>
+        <p class="card-desc">
+          We extend counterfactual reasoning to Data Envelopment Analysis (DEA), introducing an optimization-based
+          framework for interpretable target setting in efficiency analysis. Counterfactual targets are computed via
+          mixed-integer convex optimization, providing transparent and actionable explanations for inefficient units.
         </p>
       </div>
 
-      <div class="paper">
-        <p class="paper-title">
-          <a href="https://doi.org/10.1016/j.eswa.2023.121954">
-            Generating Collective Counterfactual Explanations in Score-Based
-            Classification via Mathematical Optimization
+      <div class="card">
+        <p class="card-title">
+          <a href="https://doi.org/10.1016/j.eswa.2023.121954" target="_blank" rel="noopener">
+            Generating collective counterfactual explanations in score-based classification via mathematical optimization
           </a>
         </p>
-        <p class="paper-meta">Expert Systems with Applications, 2024</p>
-        <p class="paper-desc">
-          This work studies collective counterfactual explanations, where 
-          explanations are generated for an entire group of individuals at the same time. We formulate
-          the problem as a mixed-integer optimization model that minimizes total
-          perturbation cost while guaranteeing a favorable classification outcome,
-          allowing shared influential features and outliers to be identified
-          simultaneously.
+        <p class="card-meta">E. Carrizosa, J. Ramírez-Ayerbe, D. Romero Morales · Expert Systems with Applications, 238:121954, 2024</p>
+        <p class="card-desc">
+          Collective counterfactual explanations generated for an entire group of individuals at once. We formulate the
+          problem as a mixed-integer model that minimizes total perturbation cost while guaranteeing a favorable outcome,
+          allowing shared influential features and outliers to be identified simultaneously.
+        </p>
+      </div>
+
+      <div class="card">
+        <p class="card-title">
+          <a href="https://doi.org/10.1007/s11634-023-00563-5" target="_blank" rel="noopener">
+            A new model for counterfactual analysis for functional data
+          </a>
+        </p>
+        <p class="card-meta">E. Carrizosa, J. Ramírez-Ayerbe, D. Romero Morales · Advances in Data Analysis and Classification, 18:981–1000, 2024</p>
+        <p class="card-desc">
+          A counterfactual analysis framework tailored to functional data, where instances are curves rather than
+          vectors. The approach yields interpretable, optimization-based explanations that respect the functional
+          structure of the inputs.
         </p>
       </div>
     </section>
+
+    <section>
+      <h2>Preprints &amp; Working Papers</h2>
+
+      <div class="card">
+        <p class="card-title">
+          <a href="https://arxiv.org/abs/2506.19155" target="_blank" rel="noopener">
+            Relative explanations for contextual problems with endogenous uncertainty: an application to competitive facility location
+          </a>
+        </p>
+        <p class="card-meta">J. Ramírez-Ayerbe, E. Frejinger · arXiv:2506.19155, 2025</p>
+        <p class="card-desc">
+          Explaining decisions arising from contextual optimization problems under endogenous (decision-dependent)
+          uncertainty, with an application to competitive facility location.
+        </p>
+      </div>
+
+      <div class="card">
+        <p class="card-title">
+          <a href="https://arxiv.org/abs/2402.09473" target="_blank" rel="noopener">
+            One-for-many counterfactual explanations by column generation
+          </a>
+          <span class="tag">R&amp;R · INFORMS J. on Optimization</span>
+        </p>
+        <p class="card-meta">A. Lodi, J. Ramírez-Ayerbe · arXiv:2402.09473, 2024</p>
+        <p class="card-desc">
+          A column-generation framework that produces sparse counterfactual explanations covering many instances with a
+          shared, compact set of changes — scaling group explanations to large populations.
+        </p>
+      </div>
+
+      <div class="card">
+        <p class="card-title">
+          <a href="https://www.researchgate.net/publication/400516545_On_multi-stage_Counterfactual_Explanations" target="_blank" rel="noopener">
+            Multistage counterfactual decisions
+          </a>
+        </p>
+        <p class="card-meta">E. Carrizosa, J. Ramírez-Ayerbe, D. Romero Morales · Technical report, 2025</p>
+        <p class="card-desc">
+          Extending counterfactual reasoning to sequential, multistage decision settings.
+        </p>
+      </div>
+    </section>
+
+    <p style="margin-top:24px;">
+      See also my
+      <a href="https://scholar.google.com/citations?user=JxucJSQAAAAJ" target="_blank" rel="noopener">Google Scholar</a> and
+      <a href="https://orcid.org/0000-0002-7715-3756" target="_blank" rel="noopener">ORCID</a> profiles.
+    </p>
 
     <footer class="footer">
       © <span id="y"></span> Jasone Ramírez-Ayerbe
